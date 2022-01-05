@@ -1,0 +1,167 @@
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    max-width: 1440px;
+    height: 650px;
+}
+
+h1{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+}
+/*div p::after {
+    float: right;
+    content: url(images/icon-arrow-down.svg);
+}
+*/
+
+hr {
+    border: 0.5px solid rgb(148, 148, 148);
+    box-shadow: 0px;
+}
+section{
+    width: 50%;
+    margin-top: 70px;
+    margin-right: 70px;
+    margin-left: 50px;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+}
+p{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+    
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.answer h4{
+    padding-top: 1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(100, 100, 100, 0.61);
+    
+}
+.container{
+    margin: 100px auto;
+    overflow: hidden;
+    width: 64%;
+    height: 80%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 40px 40px 0.5px rgba(0, 0, 0, 0.26);
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -570px top -300px;
+    display: flex;
+}
+.out{
+    position: absolute;
+    left: 166px;
+    top: 300px;
+    z-index: 2;
+    
+}
+.background{
+    width: 50%;
+    height: 100%;
+}
+
+.women{
+    position: relative;
+    top: 70px;
+    right: 80px;
+}
+.title{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+.faq{
+    max-width: 340px;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(184, 184, 184, 0.322);
+    cursor: pointer;
+}
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active p {
+    color: black;
+    font-weight: 700;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq.active svg {
+    transform: rotate(180deg);
+}
+svg{
+    transition: transform 0.5s ease-in;
+}
+@keyframes fade{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    body{
+        max-width: 414px;
+        height: 736px;
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px ;
+        width: 90%;
+        background-position: left 57px top -130px;
+        background-size: 240px;
+    }
+    .women{
+        position: absolute;
+        top: 40px;
+        width: 60%;
+    }
+    .out{
+        position: absolute;
+        left: 80px;
+        top: 110px;
+        z-index: 2;
+        width: 23%;
+    }
+    .title{
+        margin: auto;
+        text-align: center;
+    }
+    section{
+        width: 85%;
+        margin: 30px 30px 80px 30px;
+        box-sizing: border-box;
+        
+    }
+}
